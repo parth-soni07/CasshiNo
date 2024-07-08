@@ -1,0 +1,179 @@
+.main-section {
+    position: relative;
+    background-image: url('C:\Users\user\OneDrive\Pictures\phonewallet.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    backdrop-filter: blur(8px); /* Adjust blur effect */
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange; /* Cursor color */
+    animation:
+      typing 4s steps(40, end) 1s infinite,
+      blink 0.75s step-end infinite;
+      font-size: 24px;
+      line-height: 1.5;
+  }
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange; /* Cursor color */
+    animation:
+      typing 3.5s steps(40, end) infinite,
+      blink 0.75s step-end infinite;
+      width: 0; /* Initial width */
+      max-width: 27%; /* Ensure the width doesn't exceed its container */
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-container {
+    position: fixed; /* Fix the button’s position */
+    bottom: 400px; /* Distance from the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);/* Center the button */
+  }
+
+.button {
+    background-color: salmon;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px; /* Circular corners */
+    padding: 24px 30px; /* Button size */
+    font-size: 25px;
+    cursor: pointer;
+    position: relative; /* Needed for absolute positioning of the pseudo-elements */
+    overflow: hidden; /* Ensures that the pseudo-elements do not overflow */
+    transition: all 0.4s ease; /* Smooth transition for all properties */
+}
+
+/* Glowing effect */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    border-radius: 50%;
+    background: rgba(255, 105, 97, 0.3); /* Light glow color */
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  /* Hover effects */
+  .button:hover {
+    background-color: #e57373; /* Slightly lighter shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  
+  /* Glow effect on hover */
+  .button:hover::before {
+    width: 350%;
+    height: 350%;
+    background: rgba(255, 105, 97, 0.5); /* Brighter glow color */
+  }
+  
+  /* Click effect */
+  .button:active {
+    transform: scale(0.95); /* Slightly shrink size on click */
+    background-color: #d32f2f; /* Darker shade when clicked */
+  }
+  
+  /* Button animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 105, 97, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 105, 97, 1);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 105, 97, 0.7);
+    }
+  }
+  
+  .button {
+    animation: pulse 1.5s infinite; /* Apply pulse animation */
+  }
+/* Additional styles to ensure layout is maintained */
+.main-content {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Table Styles */
+.table-container {
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+

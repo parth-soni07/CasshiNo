@@ -10,8 +10,6 @@ import { WagmiProvider } from "wagmi";
 import { sepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
-
-
 const queryClient = new QueryClient();
 
 const config = getDefaultConfig({
@@ -20,16 +18,17 @@ const config = getDefaultConfig({
   chains: [sepolia],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
+
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
-  return (
 
+  return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
           <div className="App">
-            <Header setCurrentSection= {setCurrentSection}/>
-            <Main currentSection= {currentSection}/>
+            <Header setCurrentSection={setCurrentSection} />
+            <Main currentSection={currentSection} />
             <Footer />
           </div>
         </RainbowKitProvider>
