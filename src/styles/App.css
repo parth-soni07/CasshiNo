@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
   font-family: 'Playwrite IT Moderna', sans-serif;
 }
@@ -21,6 +30,7 @@ nav li {
 }
 
 main {
+  flex : 1;
   padding: 20px;
 }
 

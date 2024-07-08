@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
 import Main from './pages/Main';
@@ -21,14 +21,15 @@ const config = getDefaultConfig({
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 function App() {
+  const [currentSection, setCurrentSection] = useState('home');
   return (
 
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
           <div className="App">
-            <Header />
-            <Main />
+            <Header setCurrentSection= {setCurrentSection}/>
+            <Main currentSection= {currentSection}/>
             <Footer />
           </div>
         </RainbowKitProvider>
