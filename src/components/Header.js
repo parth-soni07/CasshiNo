@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { Link } from "react-router-dom";
 
-function Header({ setCurrentSection }) {
+function Header({}) {
   const [name, setName] = useState("");
 
   const handleNameChange = (event) => {
@@ -12,37 +13,55 @@ function Header({ setCurrentSection }) {
   const handleClick = (section, event) => {
     event.preventDefault();
     document.getElementById(section).scrollIntoView({ behavior: "smooth"});
-    setCurrentSection(section);
+
   };
 
   return (
     <header>
-      <h1> Welcome to the website</h1>
-      <nav className="navbar">
-        <ul className="nav-list">
-          <li>
-            <a href="#home" onClick={(event) => handleClick('home', event)} className="nav-link">Home</a>
-          </li>
-          <li>
-            <a href="#about" onClick={(event) => handleClick('about', event)} className="nav-link">About us</a>
-          </li>
-          <li className="name-bar">
-            <input
-              type="text"
-              placeholder="Your Name?"
-              value={name}
-              onChange={handleNameChange}
-            />
-          </li>
-          <li>
-            <a href="#contact" onClick={(event) => handleClick('contact', event)} className="nav-link">Contact us</a>
-          </li>
-          <li>
-            <a href="#reviews" onClick={(event) => handleClick('reviews', event)} className="nav-link">Reviews</a>
-          </li>
-        </ul>
-        <ConnectButton />
-      </nav>
+      <div className="header-div">
+        <div className="hey-div">
+          <h2>Cashh Ino</h2>
+        </div>
+
+        <nav className="navbar">
+          <ul className="nav-list">
+            <li>
+              <Link to="/">Home</Link>
+              {/* <a href="#home" onClick={(event) => handleClick('home', event)} className="nav-link">Home</a> */}
+            </li>
+            <li>
+              <a
+                href="#about"
+                onClick={(event) => handleClick("about", event)}
+                className="nav-link"
+              >
+                About us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                onClick={(event) => handleClick("contact", event)}
+                className="nav-link"
+              >
+                Contact us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#reviews"
+                onClick={(event) => handleClick("reviews", event)}
+                className="nav-link"
+              >
+                Reviews
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="connect-button">
+          <ConnectButton />
+        </div>
+      </div>
     </header>
   );
 }

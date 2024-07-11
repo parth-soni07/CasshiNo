@@ -3,12 +3,13 @@ import './styles/App.css';
 import Header from './components/Header';
 import Main from './pages/Main';
 import Footer from './components/Footer';
-
+import { Route, Routes} from "react-router-dom";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
 import { sepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import Table from './pages/Table';
 
 const queryClient = new QueryClient();
 
@@ -20,17 +21,24 @@ const config = getDefaultConfig({
 });
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home');
 
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
-          <div className="App">
-            <Header setCurrentSection={setCurrentSection} />
-            <Main currentSection={currentSection} />
-            <Footer />
-          </div>
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="App">
+                  <Main/>
+                  <Footer />
+                </div>
+              }
+            />
+            <Route path='/borrow' element={<Table/>} />
+          </Routes>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
