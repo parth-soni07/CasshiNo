@@ -20,10 +20,9 @@ function Main({ currentSection }) {
       </div>
     );
   } else {
-    switch (currentSection) {
-      case 'home':
         content = (
-            <div className="main-section">
+          <div>
+            <section id="home" className="main-section">
             <div className="main-content">
                 <div className="button-container">
             <button className="button" onClick={() => setShowTable(true)}>Borrow</button>
@@ -34,22 +33,22 @@ function Main({ currentSection }) {
               <p>Digital wallets may be included in a bank's mobile app or payment apps like PayPal or Alipay.</p>
               <p>Digital wallets allow people in financially underserved parts of the world to access financial services they may not have been able to before.</p>
             </div>
-          </div>
-        );
-        break;
-      case 'about':
-        content = <p>About section</p>;
-        break;
-      case 'contact':
-        content = <p>Contact us section</p>;
-        break;
-      case 'reviews':
-        content = <p>Reviews section</p>;
-        break;
-      default:
-        content = <p>Welcome to the website.</p>;
-        break;
-    }
+            </section>
+            <section id="about" className="about-section">
+            <h2>About Us</h2>
+          <div className="about-box">
+            <p><b>Yukta Kumawat</b>
+              Worked on various projects, including AI model training with OpenCV, Keras, TensorFlow, and Python; a machine learning project for early tumor detection using R; and game development with Unity 3D in C#. Enjoys playing guitar, having learned for three years from a renowned musician, and painting landscapes.
+            </p>
+            </div>
+            <div className="about-box">
+            <p><b>Parth Sonu</b>
+            content to be written.
+            </p>
+            </div>  
+        </section>
+      </div>
+    );
   }
 
   return <main>{content}</main>;

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
+
 body, html{
   margin: 0;
   padding: 0;

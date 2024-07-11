@@ -1,6 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
 .main-section {
     position: relative;
-    background-image: url('C:\Users\user\OneDrive\Pictures\phonewallet.jpg'); /* Replace with your image path */
+    background-image: url('C:/Users/user/OneDrive/Pictures/phonewallet.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Adjust height as needed */
@@ -9,7 +12,7 @@
     justify-content: center;
     overflow: hidden;
   }
-  
+
   .main-content {
     position: relative;
     text-align: center;
@@ -177,3 +180,48 @@ tr:hover {
     background-color: #ddd;
 }
 
+/* Styles for the About Us section */
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:60px 20px;
+  background-color: salmon;
+  background-size: cover;
+  background-position: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.about-section h2 {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #fff; 
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin-bottom: 20px; 
+}
+
+.about-box {
+  background:  rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.about-box h2 {
+  margin-top: 0;
+}
+
+.about-box p {
+  margin-bottom: 0;
+}
+
+.about-box b {
+  display: block; /* Ensure name is on its own line */
+  margin-bottom: 10px; /* Space below the name */
+}

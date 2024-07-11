@@ -11,6 +11,7 @@ function Header({ setCurrentSection }) {
 
   const handleClick = (section, event) => {
     event.preventDefault();
+    document.getElementById(section).scrollIntoView({ behavior: "smooth"});
     setCurrentSection(section);
   };
 
