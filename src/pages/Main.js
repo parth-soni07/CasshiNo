@@ -1,149 +1,95 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/Main.css';
-import { useNavigate } from 'react-router-dom';
-function Main({  }) {
+import React, { useState, useEffect } from "react";
+import "../styles/Main.css";
+import { useNavigate } from "react-router-dom";
+function Main({}) {
   const [showTable, setShowTable] = useState(false);
   const navigate = useNavigate();
   const homeButton = () => {
-  navigate("/borrow");
-  console.log("Handle Back Handler Working");
-};
-
+    navigate("/borrow");
+    console.log("Handle Back Handler Working");
+  };
 
   let content;
 
   if (showTable) {
     content = (
       <div>
-        
         <Table />
       </div>
     );
   } else {
-        content = (
-          <div>
-            <section id="home" className="main-section">
-              <div className="main-content">
-                <div className="button-container">
-                  <button className="button" onClick={homeButton}>
-                    Borrow
-                  </button>
-                </div>
-                <h2 className="typing-effect">Why use digital wallet?</h2>
-                <p>
-                  Digital wallets are financial applications that allow you to
-                  store funds, make transactions, and track payment histories on
-                  devices like phones and tablets.
-                </p>
-                <p>
-                  You can store all of your financial information in a digital
-                  wallet; some even let you store identification cards and
-                  driver's licenses.
-                </p>
-                <p>
-                  Digital wallets may be included in a bank's mobile app or
-                  payment apps like PayPal or Alipay.
-                </p>
-                <p>
-                  Digital wallets allow people in financially underserved parts
-                  of the world to access financial services they may not have
-                  been able to before.
-                </p>
-              </div>
-            </section>
-            <section id="about" className="about-section">
-<<<<<<< HEAD
-            <h2>About Us</h2>
-          <div className="about-box">
-            <p><b>Yukta Kumawat</b>
-              Worked on various projects, including AI model training with OpenCV, Keras, TensorFlow, and Python; a machine learning project for early tumor detection using R; and game development with Unity 3D in C#. Enjoys playing guitar, having learned for three years from a renowned musician, and painting landscapes.
-            </p>
+    content = (
+      <div>
+        <section id="home" className="main-section">
+          <div className="main-content">
+            <div className="button-container">
+              <button className="button" onClick={homeButton}>
+                Borrow
+              </button>
             </div>
-            <div className="about-box">
-            <p><b>Parth Sonu</b>
-            content to be written.
+            <h2 className="typing-effect">Why use digital wallet?</h2>
+            <p>
+              Digital wallets are financial applications that allow you to store
+              funds, make transactions, and track payment histories on devices
+              like phones and tablets.
             </p>
-            </div>  
+            <p>
+              You can store all of your financial information in a digital
+              wallet; some even let you store identification cards and driver's
+              licenses.
+            </p>
+            <p>
+              Digital wallets may be included in a bank's mobile app or payment
+              apps like PayPal or Alipay.
+            </p>
+            <p>
+              Digital wallets allow people in financially underserved parts of
+              the world to access financial services they may not have been able
+              to before.
+            </p>
+          </div>
         </section>
-        <section id="contact" className="contact-section">
-      <h2>Contact Us</h2>
-      <div className="contact-container">
-        <div className="contact-card">
-          <h3>Yukta Kumawat</h3>
-          <p>Phone:+91 9828278013</p>
-          <div className="social-links">
-            <a href="https://www.instagram.com/yukta_151?igsh=bm5meXQyNmxwY2Y2" target="_blank" rel="noopener noreferrer">
-              <img src="/images/insta.png" className="social-icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/yukta-kumawat" target="_blank" rel="noopener noreferrer">
-              <img src="/images/linkesIn.png" className="social-icon" />
-            </a>
-            <a href="  " target="_blank" rel="noopener noreferrer">
-              <img src="/images/twit.png" className="social-icon" />
-            </a>
+        <section id="about" className="about-section">
+          <h2>Rules of Game</h2>
+          <div className="about-box">
+            <p>
+              <b>Yukta Kumawat</b>
+              <ul>
+                <li>Rule 1</li>
+                <li>Rule 2</li>
+                <li>Rule 3</li>
+                <li>Rule 4</li>
+                <li>Rule 5</li>
+              </ul>
+            </p>
           </div>
-        </div>
-        <div className="contact-card">
-          <h3>Parth Soni</h3>
-          <p>Phone:+91 9653758496</p>
-          <div className="social-links">
-            <a href="https://www.instagram.com/papakapaaro?igsh=cnl2aXQ4eHl3eGcz" target="_blank" rel="noopener noreferrer">
-              <img src="/images/insta.png" className="social-icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/parth--soni" target="_blank" rel="noopener noreferrer">
-              <img src="/images/linkesIn.png" className="social-icon" />
-            </a>
-            <a href="   " target="_blank" rel="noopener noreferrer">
-              <img src="/images/twit.png" className="social-icon" />
-            </a>
+          <div className="about-box">
+            <p>
+              <b>Profit</b>
+              <ul>
+                <li>Rule 1</li>
+                <li>Rule 2</li>
+                <li>Rule 3</li>
+                <li>Rule 4</li>
+                <li>Rule 5</li>
+              </ul>
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
+          <div className="about-box">
+            <p>
+              <b>Loss</b>
+              <ul>
+                <li>Rule 1</li>
+                <li>Rule 2</li>
+                <li>Rule 3</li>
+                <li>Rule 4</li>
+                <li>Rule 5</li>
+              </ul>
+            </p>
+          </div>
+        </section>
       </div>
     );
-=======
-              <h2>Rules of Game</h2>
-              <div className="about-box">
-                <p>
-                  <b>Yukta Kumawat</b>
-                  <ul>
-                    <li>Rule 1</li>
-                    <li>Rule 2</li>
-                    <li>Rule 3</li>
-                    <li>Rule 4</li>
-                    <li>Rule 5</li>
-                  </ul>
-                </p>
-              </div>
-              <div className="about-box">
-                <p>
-                  <b>Profit</b>
-                  <ul>
-                    <li>Rule 1</li>
-                    <li>Rule 2</li>
-                    <li>Rule 3</li>
-                    <li>Rule 4</li>
-                    <li>Rule 5</li>
-                  </ul>
-                </p>
-              </div>
-              <div className="about-box">
-                <p>
-                  <b>Loss</b>
-                  <ul>
-                    <li>Rule 1</li>
-                    <li>Rule 2</li>
-                    <li>Rule 3</li>
-                    <li>Rule 4</li>
-                    <li>Rule 5</li>
-                  </ul>
-                </p>
-              </div>
-            </section>
-          </div>
-        );
->>>>>>> 095ab1e5815df09dfdb3ca4738411cef6ead1e17
   }
 
   return <main>{content}</main>;
