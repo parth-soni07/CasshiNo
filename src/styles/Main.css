@@ -211,6 +211,12 @@ tr:hover {
   width: 30%; /* Adjust width as needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: scale(1.10); /* Slightly enlarge the box */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .about-box h2 {
@@ -224,4 +230,71 @@ tr:hover {
 .about-box b {
   display: block; /* Ensure name is on its own line */
   margin-bottom: 10px; /* Space below the name */
+}
+
+
+/*contact us css*/
+.contact-section {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: darkslategray;
+  margin-bottom: 40px;
+  margin-top: -10px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
 }

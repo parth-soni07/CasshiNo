@@ -47,6 +47,41 @@ function Main({ currentSection }) {
             </p>
             </div>  
         </section>
+        <section id="contact" className="contact-section">
+      <h2>Contact Us</h2>
+      <div className="contact-container">
+        <div className="contact-card">
+          <h3>Yukta Kumawat</h3>
+          <p>Phone:+91 9828278013</p>
+          <div className="social-links">
+            <a href="https://www.instagram.com/yukta_151?igsh=bm5meXQyNmxwY2Y2" target="_blank" rel="noopener noreferrer">
+              <img src="/images/insta.png" className="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/yukta-kumawat" target="_blank" rel="noopener noreferrer">
+              <img src="/images/linkesIn.png" className="social-icon" />
+            </a>
+            <a href="  " target="_blank" rel="noopener noreferrer">
+              <img src="/images/twit.png" className="social-icon" />
+            </a>
+          </div>
+        </div>
+        <div className="contact-card">
+          <h3>Parth Soni</h3>
+          <p>Phone:+91 9653758496</p>
+          <div className="social-links">
+            <a href="https://www.instagram.com/papakapaaro?igsh=cnl2aXQ4eHl3eGcz" target="_blank" rel="noopener noreferrer">
+              <img src="/images/insta.png" className="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/parth--soni" target="_blank" rel="noopener noreferrer">
+              <img src="/images/linkesIn.png" className="social-icon" />
+            </a>
+            <a href="   " target="_blank" rel="noopener noreferrer">
+              <img src="/images/twit.png" className="social-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
       </div>
     );
   }
