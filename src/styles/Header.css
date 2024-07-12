@@ -1,19 +1,37 @@
 header {
-  background-color: darkslategrey;
-  padding: 20px;
-  color: salmon;
-  text-align: center; /* Center text */
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   margin-bottom: 20px; /* Add space below the heading */
 }
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Optional: Adds some padding on the sides */
+}
 
 .navbar {
-  display: flex;
-  flex-direction: column; /* Stack header and nav vertically */
+  /* display: flex; */
+
+  /* width: 95%; */
+  /* flex-direction: column;  */
   align-items: center; /* Center the nav horizontally */
+  border-radius: 50px;
+  padding: 20px;
+  /* margin: 0px 23rem; */
 }
+.navbar:hover {
+    transform: scale(1.05);
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+  }
 
 .nav-list {
   display: flex;
@@ -49,50 +67,17 @@ h1 {
   margin: 0 10px; /* Space on either side of the input */
 }
 
-/* Style the Connect button */
-.connect-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: lightcoral;
+.connect-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-left: ; */
+}
+.hey-div{
+    font-family: 'Playwrite IT Moderna', sans-serif;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  position: relative;
-  margin-top: 20px; /* Space between nav and button */
-}
-
-.connect-button:hover {
-  background-color: darksalmon;
-  transform: scale(1.1); /* Slightly increase size on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-.connect-button:active {
-  background-color: rgb(2, 73, 2); /* Change color on click */
-  transform: scale(0.95); /* Slightly shrink size on click */
-}
-
-.connect-button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  border-radius: 50%;
-  transition: width 0.3s ease, height 0.3s ease;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-.connect-button:hover::before {
-  width: 400%;
-  height: 400%;
-  background: rgba(255, 255, 255, 0);
-}
-
-.connect-button span {
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
 }
