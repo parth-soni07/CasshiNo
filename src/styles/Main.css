@@ -3,7 +3,7 @@ html {
 }
 .main-section {
     position: relative;
-    background-image: url('D:\Hack\One\public\images\phonewallet.jpg');
+    background-image: url('/public/images/phonewallet.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Adjust height as needed */
