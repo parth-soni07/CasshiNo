@@ -35,7 +35,7 @@ function Header({}) {
                 onClick={(event) => handleClick("about", event)}
                 className="nav-link"
               >
-                About us
+                Rules
               </a>
             </li>
             <li>
